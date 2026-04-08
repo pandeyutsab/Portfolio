@@ -4,226 +4,262 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Utsab Pandey | Mechanical Engineer</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
+:root{--bg:#090e1a;--surface:#111827;--surface2:#1a2538;--blue:#3b82f6;--blue-light:#60a5fa;--green:#22c55e;--cyan:#06b6d4;--text:#e2e8f0;--muted:#94a3b8;--border:rgba(255,255,255,0.07)}
 *{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family: 'Segoe UI', sans-serif;
-  background:#0f172a;
-  color:#e5e7eb;
-}
-
-/* HEADER */
-header{
-  text-align:center;
-  padding:60px 20px;
-  background:linear-gradient(135deg,#1e3a8a,#2563eb);
-}
-
-header img{
-  width:140px;
-  height:140px;
-  border-radius:50%;
-  object-fit:cover;
-  margin-bottom:15px;
-  border:4px solid white;
-}
-
-header h1{
-  font-size:2.8rem;
-}
-
-header p{
-  margin-top:10px;
-  opacity:0.9;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 18px;
-  background:#22c55e;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
-.section-title{
-  font-size:1.8rem;
-  margin:40px 0 10px;
-  color:#60a5fa;
-}
-
-.card{
-  background:#1e293b;
-  padding:20px;
-  border-radius:14px;
-  margin-bottom:25px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.4);
-}
-
-.grid{
-  display:grid;
-  gap:12px;
-  margin-top:15px;
-}
-
-.grid-3{grid-template-columns: repeat(auto-fit,minmax(140px,1fr));}
-.grid-2{grid-template-columns: repeat(auto-fit,minmax(200px,1fr));}
-
-img{
-  width:100%;
-  border-radius:10px;
-}
-
-/* VIDEO FIX */
-video{
-  width:100%;
-  max-height:400px;
-  object-fit:cover;
-  border-radius:10px;
-}
-
-a{
-  color:#38bdf8;
-  text-decoration:none;
-}
-
-.contact{
-  text-align:center;
-}
-
-footer{
-  text-align:center;
-  padding:20px;
-  opacity:0.7;
-}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+nav{position:sticky;top:0;z-index:100;background:rgba(9,14,26,0.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:56px}
+nav .logo{font-family:'Space Mono',monospace;font-size:0.9rem;color:var(--blue-light);letter-spacing:0.05em}
+nav ul{list-style:none;display:flex;gap:24px}
+nav ul a{color:var(--muted);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.03em;transition:color 0.2s}
+nav ul a:hover{color:var(--blue-light)}
+header{padding:90px 20px 70px;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(59,130,246,0.14) 0%,transparent 70%);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%233b82f6' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+header img{width:130px;height:130px;border-radius:50%;object-fit:cover;border:3px solid var(--blue);box-shadow:0 0 30px rgba(59,130,246,0.3);margin-bottom:20px;position:relative;z-index:1}
+header h1{font-family:'Space Mono',monospace;font-size:2.6rem;letter-spacing:-0.02em;background:linear-gradient(135deg,#fff 0%,var(--blue-light) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:1}
+header .subtitle{color:var(--muted);margin-top:10px;font-size:1rem;position:relative;z-index:1}
+header .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px;position:relative;z-index:1}
+header .tag{background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);color:var(--blue-light);padding:4px 12px;border-radius:20px;font-size:0.78rem;font-weight:500}
+header .tag.green{background:rgba(34,197,94,0.12);border-color:rgba(34,197,94,0.3);color:var(--green)}
+.btn{display:inline-block;margin-top:22px;padding:11px 24px;background:var(--blue);color:white;text-decoration:none;border-radius:8px;font-weight:600;font-size:0.9rem;transition:background 0.2s,transform 0.15s;box-shadow:0 4px 20px rgba(59,130,246,0.3);position:relative;z-index:1}
+.btn:hover{background:#2563eb;transform:translateY(-1px)}
+.container{max-width:1080px;margin:auto;padding:20px 24px 60px}
+.section-title{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue);margin:52px 0 16px;display:flex;align-items:center;gap:12px}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.card{background:var(--surface);border:1px solid var(--border);padding:24px;border-radius:16px;margin-bottom:20px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(59,130,246,0.2)}
+.about-text{color:var(--muted);font-size:1rem;line-height:1.85}
+.about-text strong{color:var(--text)}
+.skills-grid{display:flex;flex-wrap:wrap;gap:10px}
+.skill-pill{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:6px 14px;border-radius:8px;font-size:0.84rem;font-weight:500;font-family:'Space Mono',monospace;transition:border-color 0.2s,color 0.2s}
+.skill-pill:hover{border-color:var(--blue);color:var(--blue-light)}
+.project-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:24px;transition:border-color 0.2s,transform 0.2s}
+.project-card:hover{border-color:rgba(59,130,246,0.3);transform:translateY(-2px)}
+.project-header{padding:20px 24px 14px}
+.project-header h3{font-family:'Space Mono',monospace;font-size:1.02rem;color:var(--text);margin-bottom:8px}
+.project-header p{color:var(--muted);font-size:0.91rem;line-height:1.75}
+.img-grid{display:grid;gap:6px;padding:0 6px 6px}
+.img-grid-3{grid-template-columns:repeat(3,1fr)}
+.img-grid-2{grid-template-columns:repeat(2,1fr)}
+.img-grid img{width:100%;height:180px;object-fit:cover;border-radius:10px}
+.video-block{margin-bottom:22px}
+.video-label{font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;color:var(--cyan);margin-bottom:8px;display:flex;align-items:center;gap:8px;text-transform:uppercase}
+.video-label::before{content:'▶';font-size:0.62rem}
+video{width:100%;border-radius:10px;background:#000;max-height:380px;display:block}
+.cert-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.cert-list li{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-size:0.87rem;display:flex;align-items:flex-start;gap:10px}
+.cert-list li::before{content:'✦';color:var(--blue);font-size:0.68rem;margin-top:4px;flex-shrink:0}
+.cert-list .date{color:var(--muted);font-size:0.77rem;display:block;margin-top:3px}
+.lead-item{border-left:2px solid var(--blue);padding-left:16px;margin-bottom:18px}
+.lead-item h4{font-weight:600;color:var(--text);font-size:0.95rem}
+.lead-item .role-meta{color:var(--muted);font-size:0.82rem;margin-top:2px}
+.lead-item p{color:var(--muted);font-size:0.88rem;margin-top:6px}
+.contact-grid{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.contact-item{display:flex;align-items:center;gap:10px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:12px 20px;font-size:0.9rem;color:var(--text);text-decoration:none;transition:border-color 0.2s,color 0.2s}
+.contact-item:hover{border-color:var(--blue);color:var(--blue-light)}
+footer{text-align:center;padding:30px 20px;color:var(--muted);font-size:0.78rem;border-top:1px solid var(--border);font-family:'Space Mono',monospace}
+@media(max-width:640px){header h1{font-size:1.8rem}nav ul{gap:14px}nav ul a{font-size:0.75rem}.img-grid-3{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
-
 <body>
 
-<header>
-<img src="head.jpg">
-<h1>Utsab Pandey</h1>
-<p>Mechanical Engineering Honors Student • 4.0 GPA • Texas State University</p>
-<p>Undergraduate Researcher (NSF/NIH/USDA Funded) • Autodesk Ambassador</p>
+<nav>
+  <div class="logo">UP.exe</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<a href="Utsab_Pandey_Resume.pdf" class="btn" download>Download Resume</a>
+<header>
+  <img src="head.jpg" alt="Utsab Pandey">
+  <h1>Utsab Pandey</h1>
+  <p class="subtitle">Mechanical Engineering Honors Student · Texas State University</p>
+  <div class="tags">
+    <span class="tag">4.0 GPA · President's List</span>
+    <span class="tag">NSF / NIH / USDA Researcher</span>
+    <span class="tag">Autodesk Ambassador</span>
+    <span class="tag green">🟢 Open to Summer 2026 Internships · CPT Authorized</span>
+  </div>
+  <a href="Utsab_Pandey_Resume.pdf" class="btn" download>⬇ Download Resume</a>
 </header>
 
 <div class="container">
 
-<!-- ABOUT -->
-<h2 class="section-title">About</h2>
-<div class="card">
-<p>
-Mechanical Engineering student with a 4.0 GPA at Texas State University specializing in CAD, robotics, and nanoscale research.
-Currently working on AFM-based sensing systems focused on signal amplification and noise reduction.
-</p>
+  <div class="section-title" id="about">About</div>
+  <div class="card">
+    <p class="about-text">
+      Mechanical Engineering Honors sophomore at Texas State University with a <strong>4.0 GPA</strong> and active <strong>NSF/NIH/USDA-funded undergraduate researcher</strong> in AFM parametric sensing.
+      Hands-on experience across CAD design, precision fabrication, thermal systems, and nanoscale measurement.
+      Official <strong>Autodesk Design & Make Ambassador</strong>, certified in AutoCAD and MATLAB.
+      Seeking Summer 2026 internships in mechanical, manufacturing, or product engineering.
+      <strong>CPT-authorized — no sponsorship required.</strong>
+    </p>
+  </div>
+
+  <div class="section-title" id="skills">Technical Skills</div>
+  <div class="card">
+    <div class="skills-grid">
+      <span class="skill-pill">SolidWorks</span>
+      <span class="skill-pill">AutoCAD</span>
+      <span class="skill-pill">Fusion 360</span>
+      <span class="skill-pill">Simulink</span>
+      <span class="skill-pill">MATLAB</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">Arduino</span>
+      <span class="skill-pill">3D Printing</span>
+      <span class="skill-pill">Welding</span>
+      <span class="skill-pill">Milling</span>
+      <span class="skill-pill">Thin-Film Deposition</span>
+      <span class="skill-pill">Epoxy Masking</span>
+      <span class="skill-pill">AFM</span>
+      <span class="skill-pill">Oscilloscope</span>
+      <span class="skill-pill">Vibration Analysis</span>
+      <span class="skill-pill">Data Acquisition</span>
+      <span class="skill-pill">Optical Fiber Coating</span>
+      <span class="skill-pill">Surface Characterization</span>
+    </div>
+  </div>
+
+  <div class="section-title" id="projects">Engineering Projects</div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <h3>Pyrolysis Reactor Design</h3>
+      <p>Designed full reactor geometry in SolidWorks for high-temperature (~1000°C) biomass conversion. Applied heat transfer and fluid dynamics to optimize thermal distribution and gas flow. Selected high-temperature materials with insulation and pressure containment systems. Stress and thermal analysis validated design integrity across all operating conditions.</p>
+    </div>
+    <div class="img-grid img-grid-3">
+      <img src="pyro1.png" alt="Pyrolysis Reactor">
+      <img src="pyroinner.png" alt="Reactor Interior">
+      <img src="pyrolid.png" alt="Reactor Lid">
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <h3>ATM Accessibility Device</h3>
+      <p>Designed a linkage-based interface mechanism to improve ATM accessibility for disabled users. Developed and iterated CAD models through multiple design cycles. Fabricated and validated physical prototypes using 3D printing, confirming linkage performance against accessibility requirements.</p>
+    </div>
+    <div class="img-grid img-grid-3">
+      <img src="atm1.jpg.jpg" alt="ATM Device">
+      <img src="atm2.jpg.jpg" alt="ATM Linkage">
+      <img src="atm3.jpg.jpg" alt="ATM Prototype">
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <h3>Fusion Splicing — Optical Fiber Alignment</h3>
+      <p>Precision optical fiber alignment and nanoscale splicing achieving ~0.01 dB fusion loss. Developed alignment protocols for sub-millimeter fiber geometries used in AFM cantilever actuation research.</p>
+    </div>
+    <div class="img-grid img-grid-2">
+      <img src="fusion1.jpg.jpg" alt="Fusion Splice 1">
+      <img src="fusion2.jpg.jpg" alt="Fusion Splice 2">
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <h3>Sparki Robot + Egg Mechanism</h3>
+      <p>Developed passive geometry-based mechanism to reorient objects without active control. Integrated Arduino sensors and robotic system for real-time interaction. Demonstrated constraint-based mechanical design principles in a hands-on robotics context.</p>
+    </div>
+    <div class="img-grid img-grid-3">
+      <img src="sparki1.jpg.jpg" alt="Sparki Robot">
+      <img src="sparki2.jpg.jpg" alt="Sparki Setup">
+      <img src="egg1.png" alt="Egg Mechanism">
+    </div>
+  </div>
+
+  <div class="section-title" id="research">Research</div>
+  <div class="project-card">
+    <div class="project-header">
+      <h3>AFM Parametric Sensing — NSF/NIH/USDA Funded (2025–Present)</h3>
+      <p>Engineered precision Ag-coated optical fiber electrodes for AFM cantilever actuation, incorporating TiO₂ dielectric insulation layer achieving ~30% target reflectivity. Developed repeatable epoxy masking process enabling selective thin-film deposition on sub-millimeter fiber geometries. Executed chemical silver deposition (AgNO₃ + glucose reduction) producing uniform thin films. Investigated electrostatic coupling and parametric stiffness modulation (2f₀) for cantilever control, exploring noise squeezing to push force sensitivity beyond thermal noise limits.</p>
+    </div>
+    <div class="img-grid img-grid-3">
+      <img src="lab1.jpg" alt="AFM Lab">
+      <img src="lab2.jpg" alt="AFM Setup">
+      <img src="lab3.jpg" alt="AFM Measurement">
+      <img src="l1.jpg" alt="Lab Work 1">
+      <img src="l2.jpg" alt="Lab Work 2">
+      <img src="l3.jpg" alt="Lab Work 3">
+    </div>
+  </div>
+
+  <div class="section-title" id="videos">Project Videos</div>
+  <div class="card">
+    <div class="video-block">
+      <div class="video-label">Pyrolysis Reactor Demo</div>
+      <video controls src="vid1.mp4"></video>
+    </div>
+    <div class="video-block" style="margin-top:22px">
+      <div class="video-label">ATM Accessibility Device Demo</div>
+      <video controls src="vid2.mp4"></video>
+    </div>
+    <div class="video-block" style="margin-top:22px">
+      <div class="video-label">Sparki Robot Demo</div>
+      <video controls src="vid3.mp4"></video>
+    </div>
+    <div class="video-block" style="margin-top:22px">
+      <div class="video-label">AFM Lab Demo</div>
+      <video controls src="lab5.mp4"></video>
+    </div>
+  </div>
+
+  <div class="section-title" id="certs">Certifications & Awards</div>
+  <div class="card">
+    <ul class="cert-list">
+      <li><div>Autodesk Design & Make Ambassador<span class="date">2025 – Present</span></div></li>
+      <li><div>AutoCAD Certified — Autodesk<span class="date">Mar 2025</span></div></li>
+      <li><div>MATLAB Certified<span class="date">Apr 2025</span></div></li>
+      <li><div>Autodesk Fusion 360 Certified<span class="date">Apr 2025</span></div></li>
+      <li><div>Electronics Foundations: Basic Circuits<span class="date">Apr 2025</span></div></li>
+      <li><div>Learning Arduino: Foundations<span class="date">Apr 2025</span></div></li>
+      <li><div>NSF / NIH / USDA Undergraduate Research Funding<span class="date">Oct 2025 – Oct 2029</span></div></li>
+      <li><div>President's Honors Scholarship<span class="date">Texas State University</span></div></li>
+      <li><div>President's List<span class="date">Spring & Fall 2025</span></div></li>
+      <li><div>Honors College Scholar<span class="date">Texas State University</span></div></li>
+    </ul>
+  </div>
+
+  <div class="section-title">Leadership</div>
+  <div class="card">
+    <div class="lead-item">
+      <h4>Supplemental Instruction Leader</h4>
+      <div class="role-meta">Engineering & General Chemistry · Texas State University · 2025–Present</div>
+      <p>Designed and led structured learning sessions for 90+ students covering thermodynamics, kinetics, and energy systems.</p>
+    </div>
+    <div class="lead-item">
+      <h4>Autodesk Design & Make Ambassador</h4>
+      <div class="role-meta">Autodesk · 2025–Present</div>
+      <p>Conducted hands-on workshops on Fusion 360, AutoCAD, parametric modeling, stress analysis, and prototyping for engineering students campus-wide.</p>
+    </div>
+    <div class="lead-item" style="margin-bottom:0">
+      <h4>Campus Organizations</h4>
+      <div class="role-meta">Texas State University</div>
+      <p>ASME · ACS · Alpha Lambda Delta · Alkek Robotics Club</p>
+    </div>
+  </div>
+
+  <div class="section-title" id="contact">Contact</div>
+  <div class="card">
+    <div class="contact-grid">
+      <a href="tel:+17372130049" class="contact-item"><span>📞</span> +1 (737) 213-0049</a>
+      <a href="mailto:pandeyutsab554@gmail.com" class="contact-item"><span>📧</span> pandeyutsab554@gmail.com</a>
+      <a href="https://linkedin.com/in/utsab-pandey-500515246" target="_blank" class="contact-item"><span>🔗</span> LinkedIn Profile</a>
+    </div>
+  </div>
+
 </div>
 
-<!-- PYRO -->
-<h2 class="section-title">Pyrolysis Reactor Design</h2>
-<div class="card">
-<p>Designed high-temperature reactor (1000°C) with CAD modeling, material selection, and thermal analysis.</p>
-<div class="grid grid-3">
-<img src="pyro1.png">
-<img src="pyroinner.png">
-<img src="pyrolid.png">
-</div>
-</div>
-
-<!-- ATM -->
-<h2 class="section-title">ATM Accessibility Device</h2>
-<div class="card">
-<p>Mechanical linkage system for accessible ATM interaction.</p>
-<div class="grid grid-3">
-<img src="atm1.jpg.jpg">
-<img src="atm2.jpg.jpg">
-<img src="atm3.jpg.jpg">
-</div>
-</div>
-
-<!-- FUSION -->
-<h2 class="section-title">Fusion Splicing</h2>
-<div class="card">
-<p>Precision optical fiber alignment and nanoscale splicing.</p>
-<div class="grid grid-2">
-<img src="fusion1.jpg.jpg">
-<img src="fusion2.jpg.jpg">
-</div>
-</div>
-
-<!-- SPARKI -->
-<h2 class="section-title">Sparki Robot + Egg Mechanism</h2>
-<div class="card">
-<p>Geometry-based mechanism integrated with Arduino and sensors.</p>
-<div class="grid grid-2">
-<img src="sparki1.jpg.jpg">
-<img src="sparki2.jpg.jpg">
-<img src="egg1.png">
-</div>
-</div>
-
-<!-- RESEARCH -->
-<h2 class="section-title">AFM Research</h2>
-<div class="card">
-<p>Undergraduate Research — AFM Parametric Sensing (NSF/NIH/USDA funded).</p>
-<div class="grid grid-2">
-<img src="lab1.jpg">
-<img src="lab2.jpg">
-<img src="lab3.jpg">
-<img src="l1.jpg">
-<img src="l2.jpg">
-<img src="l3.jpg">
-<img src="l4.jpg">
-</div>
-</div>
-
-<!-- VIDEOS -->
-<h2 class="section-title">Project Videos</h2>
-<div class="card">
-<video controls src="vid1.mp4"></video><br><br>
-<video controls src="vid2.mp4"></video><br><br>
-<video controls src="vid3.mp4"></video><br><br>
-<video controls src="lab5.mp4"></video>
-</div>
-
-<!-- CERTIFICATIONS -->
-<h2 class="section-title">Certifications & Awards</h2>
-<div class="card">
-<ul>
-<li>Autodesk Design & Make Ambassador</li>
-<li>AutoCAD Certified</li>
-<li>MATLAB Certified</li>
-<li>President’s Honor Scholarship</li>
-<li>President’s List (Fall & Spring 2025)</li>
-<li>NSF/NIH/USDA Funded Researcher</li>
-</ul>
-</div>
-
-<!-- CONTACT -->
-<h2 class="section-title">Contact</h2>
-<div class="card contact">
-<p>📞 737-213-0049</p>
-<p>📧 pandeyutsab554@gmail.com</p>
-<p>🔗 <a href="https://linkedin.com/in/utsab-pandey-500515246" target="_blank">LinkedIn Profile</a></p>
-</div>
-
-</div>
-
-<footer>
-© 2026 Utsab Pandey
-</footer>
+<footer>© 2026 Utsab Pandey · Mechanical Engineer · Texas State University</footer>
 
 </body>
 </html>
