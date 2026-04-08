@@ -3,31 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Utsab Pandey Portfolio</title>
+<title>Utsab Pandey | Mechanical Engineering</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
-  color:#1f2937;
+  background: #0f172a;
+  color:#e5e7eb;
 }
 
 /* HEADER */
 header{
   text-align:center;
-  padding:60px 20px;
+  padding:70px 20px;
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+}
+header h1{font-size:3rem;}
+header p{opacity:0.9;margin-top:10px}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 24px;
+  background:#22c55e;
   color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
+  transition:0.3s;
 }
-header h1{
-  font-size:3rem;
-  font-weight:700;
-}
-header p{
-  margin-top:10px;
-  opacity:0.9;
-}
+.btn:hover{background:#16a34a}
 
 /* CONTAINER */
 .container{
@@ -36,25 +43,24 @@ header p{
   padding:20px;
 }
 
-/* TITLES */
+/* SECTION */
 .section-title{
   font-size:1.8rem;
-  color:white;
   margin:40px 0 10px;
+  border-left:4px solid #22c55e;
+  padding-left:10px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
-  background:rgba(255,255,255,0.95);
+  background:#1e293b;
   padding:20px;
-  border-radius:20px;
+  border-radius:16px;
   margin-bottom:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+  box-shadow:0 8px 20px rgba(0,0,0,0.4);
   transition:0.3s;
 }
-.card:hover{
-  transform:translateY(-8px);
-}
+.card:hover{transform:translateY(-6px)}
 
 /* GRID */
 .grid{
@@ -70,54 +76,44 @@ img{
   width:100%;
   height:200px;
   object-fit:cover;
-  border-radius:12px;
-  transition:0.3s;
+  border-radius:10px;
 }
-img:hover{
-  transform:scale(1.05);
-}
-
-/* VIDEO FIX */
 video{
   width:100%;
-  max-height:400px;
-  border-radius:12px;
-  object-fit:contain;
-  background:black;
-  margin-bottom:15px;
+  max-height:350px;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+/* SKILLS */
+.skills span{
+  display:inline-block;
+  background:#334155;
+  padding:6px 12px;
+  margin:5px;
+  border-radius:8px;
+  font-size:0.85rem;
 }
 
 /* CONTACT */
-.contact{
-  text-align:center;
-  font-weight:500;
-}
-.contact p{
-  margin:8px 0;
-}
+.contact{text-align:center}
 
 /* FOOTER */
 footer{
   text-align:center;
   padding:20px;
-  color:white;
-  opacity:0.8;
+  opacity:0.7;
 }
 
 /* ANIMATION */
 .fade{
   opacity:0;
-  transform:translateY(30px);
-  transition:0.6s ease;
+  transform:translateY(20px);
+  transition:0.6s;
 }
-.fade.show{
+.show{
   opacity:1;
-  transform:translateY(0);
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  header h1{font-size:2.2rem}
+  transform:none;
 }
 </style>
 </head>
@@ -127,14 +123,39 @@ footer{
 <header>
 <h1>Utsab Pandey</h1>
 <p>Mechanical Engineering Student • 4.0 GPA • Texas State University</p>
+
+<a href="Utsab_Pandey_Resume.pdf" class="btn" download>
+⬇ Download Resume
+</a>
 </header>
 
 <div class="container">
 
-<!-- ATM -->
-<h2 class="section-title">ATM Accessibility Device</h2>
+<!-- ABOUT -->
+<h2 class="section-title">About Me</h2>
 <div class="card fade">
-<p>Designed a mechanical linkage system for disabled users using spring actuation and structural optimization.</p>
+<p>
+Mechanical Engineering Honors student at Texas State University with hands-on experience in CAD design, fabrication, and nanoscale research. 
+Currently working in AFM-based sensing systems and seeking Summer 2026 internships in mechanical, manufacturing, or product engineering.
+</p>
+</div>
+
+<!-- SKILLS -->
+<h2 class="section-title">Technical Skills</h2>
+<div class="card skills fade">
+<span>SolidWorks</span><span>AutoCAD</span><span>Fusion 360</span>
+<span>MATLAB</span><span>Python</span><span>Arduino</span>
+<span>CNC Machining</span><span>3D Printing</span>
+<span>AFM</span><span>Oscilloscope</span>
+<span>Vibration Analysis</span><span>Optomechanics</span>
+</div>
+
+<!-- PROJECTS -->
+<h2 class="section-title">Engineering Projects</h2>
+
+<div class="card fade">
+<h3>ATM Accessibility Device</h3>
+<p>Designed and fabricated a linkage-based mechanical interface to improve ATM accessibility.</p>
 <div class="grid grid-3">
 <img src="atm1.jpg.jpg">
 <img src="atm2.jpg.jpg">
@@ -142,30 +163,19 @@ footer{
 </div>
 </div>
 
-<!-- FUSION -->
-<h2 class="section-title">Fusion Splicing</h2>
 <div class="card fade">
-<p>Performed precision optical fiber splicing with nanoscale alignment and low-loss optimization.</p>
-<div class="grid grid-2">
-<img src="fusion1.jpg.jpg">
-<img src="fusion2.jpg.jpg">
-</div>
-</div>
-
-<!-- SPARKI -->
-<h2 class="section-title">Sparki Robot + Egg Mechanism</h2>
-<div class="card fade">
-<p>Engineered a passive geometry-based mechanism integrated with Arduino and sensors.</p>
-<div class="grid grid-2">
+<h3>Sparki Robot + Egg Mechanism</h3>
+<p>Developed a passive geometry-based mechanism integrated with Arduino sensors.</p>
+<div class="grid grid-3">
 <img src="sparki1.jpg.jpg">
 <img src="sparki2.jpg.jpg">
+<img src="egg1.png">
 </div>
 </div>
 
-<!-- PYROLYSIS -->
-<h2 class="section-title">Pyrolysis Reactor Design</h2>
 <div class="card fade">
-<p>Designed high-temperature reactor components with material selection for thermal resistance and structural integrity. Assembled full system in CAD.</p>
+<h3>Pyrolysis Reactor Design</h3>
+<p>Designed high-temperature reactor system with material selection and thermal analysis.</p>
 <div class="grid grid-3">
 <img src="pyro1.png">
 <img src="pyroinner.png">
@@ -174,27 +184,15 @@ footer{
 </div>
 
 <!-- RESEARCH -->
-<h2 class="section-title">Research Work (AFM Lab)</h2>
+<h2 class="section-title">Research Experience</h2>
 <div class="card fade">
-<p>Worked on nanoscale sensing, fiber coating, and experimental setups in AFM research lab.</p>
+<p>AFM-based parametric sensing research involving nanoscale fiber coating and electrostatic coupling.</p>
 <div class="grid grid-3">
 <img src="lab1.jpg">
 <img src="lab2.jpg">
 <img src="lab3.jpg">
 </div>
-<video controls>
-<source src="lab5.mp4" type="video/mp4">
-</video>
-</div>
-
-<!-- POSTER -->
-<h2 class="section-title">Research Presentation</h2>
-<div class="card fade">
-<p>Presented AFM-based sensing research at TXST STEM conference.</p>
-<div class="grid grid-2">
-<img src="poster1.jpg.jpg">
-<img src="poster2.jpg.jpg">
-</div>
+<video controls><source src="lab5.mp4"></video>
 </div>
 
 <!-- VIDEOS -->
@@ -220,18 +218,14 @@ footer{
 </footer>
 
 <script>
-// SCROLL ANIMATION
-const elements = document.querySelectorAll('.fade');
-
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
     }
   });
 });
-
-elements.forEach(el=>observer.observe(el));
+document.querySelectorAll(".fade").forEach(el=>obs.observe(el));
 </script>
 
 </body>
