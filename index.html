@@ -43,7 +43,13 @@ header .tag.green{background:rgba(34,197,94,0.12);border-color:rgba(34,197,94,0.
 .img-grid{display:grid;gap:6px;padding:0 6px 6px}
 .img-grid-3{grid-template-columns:repeat(3,1fr)}
 .img-grid-2{grid-template-columns:repeat(2,1fr)}
+.img-grid-1{grid-template-columns:1fr}
 .img-grid img{width:100%;height:180px;object-fit:cover;border-radius:10px}
+.img-grid-1 img{height:320px;object-fit:contain;background:#0d1424}
+.sim-download-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 24px;background:var(--surface2);border-top:1px solid var(--border)}
+.sim-download-bar span{color:var(--muted);font-size:0.84rem}
+.sim-download-bar a{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:var(--blue);color:white;border-radius:8px;font-size:0.84rem;font-weight:600;text-decoration:none;transition:background 0.2s}
+.sim-download-bar a:hover{background:#2563eb}
 .video-block{margin-bottom:22px}
 .video-label{font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;color:var(--cyan);margin-bottom:8px;display:flex;align-items:center;gap:8px;text-transform:uppercase}
 .video-label::before{content:'▶';font-size:0.62rem}
@@ -87,7 +93,7 @@ footer{text-align:center;padding:30px 20px;color:var(--muted);font-size:0.78rem;
     <span class="tag">4.0 GPA · President's List</span>
     <span class="tag">NSF / NIH / USDA Researcher</span>
     <span class="tag">Autodesk Ambassador</span>
-    <span class="tag green">🟢 Open to Summer 2026 Internships · CPT Authorized</span>
+    <span class="tag green">🟢 Open to Summer 2026 & 2027 Internships · CPT Authorized</span>
   </div>
   <a href="Utsab_Pandey_Resume.pdf" class="btn" download>⬇ Download Resume</a>
 </header>
@@ -100,7 +106,7 @@ footer{text-align:center;padding:30px 20px;color:var(--muted);font-size:0.78rem;
       Mechanical Engineering Honors sophomore at Texas State University with a <strong>4.0 GPA</strong> and active <strong>NSF/NIH/USDA-funded undergraduate researcher</strong> in AFM parametric sensing.
       Hands-on experience across CAD design, precision fabrication, thermal systems, and nanoscale measurement.
       Official <strong>Autodesk Design & Make Ambassador</strong>, certified in AutoCAD and MATLAB.
-      Seeking Summer 2026 internships in mechanical, manufacturing, or product engineering.
+      Seeking Summer 2026 and Summer 2027 internships in mechanical, manufacturing, or product engineering.
       <strong>CPT-authorized — no sponsorship required.</strong>
     </p>
   </div>
@@ -126,11 +132,32 @@ footer{text-align:center;padding:30px 20px;color:var(--muted);font-size:0.78rem;
       <span class="skill-pill">Data Acquisition</span>
       <span class="skill-pill">Optical Fiber Coating</span>
       <span class="skill-pill">Surface Characterization</span>
+      <span class="skill-pill">Thermal FEA Simulation</span>
     </div>
   </div>
 
   <div class="section-title" id="projects">Engineering Projects</div>
 
+  <!-- NEW: Thermal Radiation Simulation -->
+  <div class="project-card">
+    <div class="project-header">
+      <h3>Biomass Pyrolysis Reactor — Thermal Radiation Simulation</h3>
+      <p>Conducted steady-state thermal radiation simulation in SolidWorks Simulation on a double-jacket biomass pyrolysis reactor. Applied 800 W heat input to the inner jacket (Alloy Steel, 700 °C) and modeled surface-to-ambient radiation to the outer jacket (Plain Carbon Steel, 25 °C). Configured physically accurate oxidized emissivity values (ε = 0.70 inner, ε = 0.80 outer). Results confirmed a peak temperature of 986 K at the inner jacket with the outer jacket remaining near ambient — validating effective thermal isolation. Produced a full professional engineering report documenting simulation methodology, Stefan-Boltzmann analysis, material selection rationale, and interpreted results.</p>
+    </div>
+    <div class="img-grid img-grid-1">
+      <img src="pyrolysis_bioreactor_simulation_image.png" alt="SolidWorks Thermal Radiation Simulation — Pyrolysis Reactor">
+    </div>
+    <div style="padding:6px 6px 0">
+      <div class="video-label" style="padding:12px 18px 8px">▶ &nbsp;Thermal Radiation Simulation — SolidWorks Walkthrough</div>
+      <video controls src="simulation.mp4" style="border-radius:10px;width:100%;max-height:360px;background:#000;display:block;margin-bottom:6px"></video>
+    </div>
+    <div class="sim-download-bar">
+      <span>📄 Full simulation report with methodology, analysis & results</span>
+      <a href="Pyrolysis_Bioreactor_Thermal_Report.pdf" download>⬇ Download Report (PDF)</a>
+    </div>
+  </div>
+
+  <!-- Existing: Pyrolysis Reactor Design -->
   <div class="project-card">
     <div class="project-header">
       <h3>Pyrolysis Reactor Design</h3>
